@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { table, row, headrow } from './ContactsList.module.css';
 import ContactsListItem from './ContactsListItem';
 
@@ -21,9 +20,7 @@ const ContactsList = ({ contacts, onDeleteContact }) => (
                     key={id}
                     className={row}
                     style={{
-                        backgroundColor: `${
-                            index % 2 === 1 ? '#fff' : '#ecf2f3'
-                        } `,
+                        backgroundColor: `${index % 2 === 1 ? '#fff' : '#ecf2f3'} `,
                     }}
                 >
                     <ContactsListItem
@@ -44,7 +41,7 @@ ContactsList.propTypes = {
             id: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
             number: PropTypes.string.isRequired,
-        }),
+        })
     ).isRequired,
     onDeleteContact: PropTypes.func.isRequired,
 };
